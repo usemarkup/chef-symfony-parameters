@@ -17,7 +17,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[symfony-parameters::default]
+      - recipe[symfony-parameters]
     attributes:
       symfony:
         user: root
