@@ -1,0 +1,32 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: "12.6.0"
+
+platforms:
+  - name: centos-7.0
+    driver_config:
+      image: centos:7
+      platform: rhel
+      provision_command:
+        - /bin/yum install -y initscripts net-tools wget
+
+suites:
+  - name: default
+    run_list:
+      - recipe[symfony-parameters::default]
+    attributes:
+      symfony:
+        user: root
+        group: root
+        configset:
+          my_awesome_app:
+            paramters:
+              test: 1
+        config:
+          lemon:
+            file: /root/paramters.yml
+            config: my_awesome_app
