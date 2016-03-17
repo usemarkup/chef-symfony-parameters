@@ -23,7 +23,7 @@ node[:symfony][:config].each do |name, config|
   template config.file do
     cookbook configset[:cookbook]
     source configset[:template]
-    mode '0775'
+    mode '0444'
     owner node[:symfony][:user]
     group node[:symfony][:group]
     variables({
