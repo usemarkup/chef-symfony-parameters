@@ -24,6 +24,7 @@ node[:symfony][:config].each do |name, config|
     cookbook configset[:cookbook]
     source configset[:template]
     mode '0644'
+    sensitive true
     owner node[:symfony][:user]
     group node[:symfony][:group]
     variables({
