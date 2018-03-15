@@ -1,5 +1,12 @@
-name             'symfony-parameters'
-license          'All rights reserved'
+name 'symfony-parameters'
+license 'MIT Licence'
 description      'Symfony Parameters'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.0'
+version          '3.0.0'
+
+maintainer 'Gavin Staniforth'
+maintainer_email 'gavin@usemarkup.com'
+
+supports 'centos'
+
+chef_version '>= 12.6' if respond_to?(:chef_version)
