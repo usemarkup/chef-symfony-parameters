@@ -1,7 +1,0 @@
-DEPENDENCIES
-  symfony-parameters
-    path: .
-    metadata: true
-
-GRAPH
-  symfony-parameters (0.1.0)
