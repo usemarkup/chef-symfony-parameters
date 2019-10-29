@@ -20,8 +20,6 @@ node['symfony']['config'].each do |name, config|
     raise "node[:symfony][:configset] does not have a config for `#{config[:config]}`"
   end
 
-  puts configset
-
   template name do
     path config['file']
     cookbook configset['cookbook']
